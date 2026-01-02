@@ -1,41 +1,21 @@
-=== SITE PARA MARIE ===
+# 💖 Site para Marie
 
-Como configurar no VS Code:
+Um site especial criado com amor por Pietro para Marie.
 
-1. Crie uma nova pasta no seu computador chamada "site-marie"
+## 🎯 Funcionalidades
+- ✅ Música especial "Pontos de Exclamação"
+- ✅ Linha do tempo da nossa história
+- ✅ Galeria com 23 fotos
+- ✅ Carta de amor personalizada
+- ✅ Contador de tempo juntos
+- ✅ Chuva de corações interativa
 
-2. Dentro dessa pasta, crie os seguintes arquivos:
-   - index.html
-   - style.css
-   - script.js
+## 💕 Data Especial
+Desenvolvido para nosso primeiro mês juntos: 03 de janeiro de 2026
 
-3. Crie duas subpastas:
-   - images/ (para as fotos de vocês)
-   - music/ (para a música de vocês)
+## 🚀 Como Ver
+Acesse: [https://seu-usuario.github.io/site-para-marie](https://seu-usuario.github.io/site-para-marie)
 
-4. Copie e cole o código correspondente em cada arquivo
+---
 
-5. Substitua os arquivos de mídia:
-   - Coloque sua música na pasta "music" com o nome "nossa-musica.mp3"
-   - Coloque suas fotos na pasta "images" com os nomes:
-     foto1.jpg, foto2.jpg, foto3.jpg, foto4.jpg
-
-6. Para testar:
-   - Abra o VS Code na pasta "site-marie"
-   - Clique com o botão direito no arquivo "index.html"
-   - Selecione "Abrir com Live Server" (se tiver a extensão)
-   - Ou clique duas vezes no arquivo para abrir no navegador
-
-Personalizações possíveis:
-
-1. Altere as datas e textos da linha do tempo
-2. Modifique a carta de amor no arquivo index.html
-3. Troque as cores alterando os valores em style.css
-4. Adicione mais fotos na galeria (atualize também o HTML)
-5. Mude o título da música em index.html
-
-Para publicar online (opcional):
-- Você pode usar serviços gratuitos como:
-  * GitHub Pages
-  * Netlify
-  * Vercel
+*Feito com ❤️ por Pietro*

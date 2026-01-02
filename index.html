@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Marie, com amor - Pietro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fundo estrelado -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- Navegação Superior com ícones secretos -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Para Marie <span class="heart">❤</span></h1>
+                <p class="nav-subtitle">Com amor, Pietro</p>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item active" data-section="home" title="Início">
+                    <i class="fas fa-home"></i>
+                    <span class="nav-text">Início</span>
+                </li>
+                <li class="nav-item" data-section="music" title="Nossa Música">
+                    <i class="fas fa-music"></i>
+                    <span class="nav-text">Música</span>
+                </li>
+                <li class="nav-item" data-section="time" title="Nosso Tempo Juntos">
+                    <i class="fas fa-clock"></i>
+                    <span class="nav-text">Tempo</span>
+                </li>
+                <li class="nav-item" data-section="timeline" title="Nossa História">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-text">História</span>
+                </li>
+                <li class="nav-item" data-section="gallery" title="Nossos Momentos">
+                    <i class="fas fa-images"></i>
+                    <span class="nav-text">Momentos</span>
+                </li>
+                <li class="nav-item" data-section="letter" title="Minha Carta">
+                    <i class="fas fa-heart"></i>
+                    <span class="nav-text">Carta</span>
+                </li>
+                <li class="nav-item" data-section="surprise" title="Surpresa">
+                    <i class="fas fa-gift"></i>
+                    <span class="nav-text">Surpresa</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <!-- Seção Início -->
+        <section id="home" class="content-section active">
+            <div class="welcome-section">
+                <div class="welcome-content">
+                    <h2>Bem-vinda, Marie!</h2>
+                    <p class="welcome-text">Este é um site especial que fiz com todo o meu amor, com o pouco que eu sei e com tudo o que aprendi ao longo dos últimos anos.</p>
+                    <p class="welcome-text">Aqui eu guardo os momentos mais especiais, a nossa história e tudo aquilo que faz o meu coração disparar.</p>
+                    <p class="welcome-text">Use o menu acima para navegar pelas seções e descobrir todos os presentinhos.</p>
+                    <div class="welcome-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Amar e trabalhar são os pilares da nossa humanidade.</p>
+                        <p class="quote-author">- Sigmund Freud</p>
+                    </div>
+                    <div class="couple-info">
+                        <div class="info-item">
+                            <i class="fas fa-calendar-heart"></i>
+                            <div>
+                                <h3>Desde</h3>
+                                <p>Junho 2025</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-heartbeat"></i>
+                            <div>
+                                <h3>Nosso Amor</h3>
+                                <p>Cresce a cada dia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="welcome-image">
+    <img src="images/foto-inicio.jpg" alt="Nossa foto" class="couple-photo">
+</div>
+        </section>
+        
+        <!-- Seção Música -->
+        <section id="music" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-music"></i> Nossa Música</h2>
+                <p class="section-subtitle">A trilha sonora do nosso amor</p>
+            </div>
+            
+            <div class="music-section">
+                <div class="music-player-container">
+                    <div class="album-cover">
+                        <div class="album-placeholder">
+                            <i class="fas fa-music"></i>
+                            <p>Pontos de Exclamação</p>
+                            <p class="album-artist">Jovem Dionisio</p>
+                        </div>
+                    </div>
+                    <div class="player-controls">
+                        <div class="song-info">
+                            <h3 id="songTitle">Pontos de Exclamação</h3>
+                            <p id="songArtist">Jovem Dionisio</p>
+                            <p id="songDesc">Nossa música especial</p>
+                        </div>
+                        <div class="controls">
+                            <button id="playBtn" class="play-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="volume-control">
+                                <i class="fas fa-volume-up"></i>
+                                <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                            </div>
+                        </div>
+                        <audio id="loveSong" loop>
+                            <source src="music/pontos-de-exclamacao.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o elemento de áudio.
+                        </audio>
+                    </div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h3>Porque esta música é especial</h3>
+                    <div class="lyrics">
+                        <p>Essa música é especial pra mim porque ela diz exatamente o que eu sinto, do jeito que eu sinto. Às vezes eu não sei explicar tudo em palavras simples você sabe que eu tenho dificuldade, mas quando eu escuto essa música, não só essa música, mas parece que tudo faz sentido, tudo se encaixa e lindo como todas as musicas de amor me lembra você.</p>
+                        
+                        <p>É quando o sentimento deixa de ser confuso e vira certeza, quando não dá mais pra falar baixo porque o que eu sinto é real demais pra esconder.</p>
+                        
+                        <p>No nosso relacionamento, essa música representa o impacto que você tem na minha vida. Não é exagero, é importância. Tem pessoas que passam como vírgula… mas você entrou como um ponto de exclamação. Você dá força, cor e emoção até aos dias mais comuns. Eu te amo, Marie.</p>
+                        
+                        <p>Ela me lembra que sentir não é fraqueza, é coragem. Que amar é escolher ser claro, verdadeiro, e não fugir do que o coração quer dizer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Tempo Juntos -->
+        <section id="time" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-clock"></i> Nosso Tempo Juntos</h2>
+                <p class="section-subtitle">Cada segundo ao seu lado é especial</p>
+            </div>
+            
+            <div class="time-container">
+                <div class="time-info">
+                    <div class="time-date">
+                        <h3>Desde quando estamos juntos?</h3>
+                        <p class="important-date">03 de Dezembro de 2025</p>
+                        <p class="time-detail">às 11:30 da manhã</p>
+                    </div>
+                    
+                    <div class="time-countdown">
+                        <h3>Tempo que estamos juntos:</h3>
+                        <div class="countdown-display">
+                            <div class="time-unit">
+                                <span id="days" class="time-number">0</span>
+                                <span class="time-label">Dias</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-unit">
+                                <span id="hours" class="time-number">0</span>
+                                <span class="time-label">Horas</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-unit">
+                                <span id="minutes" class="time-number">0</span>
+                                <span class="time-label">Minutos</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-unit">
+                                <span id="seconds" class="time-number">0</span>
+                                <span class="time-label">Segundos</span>
+                            </div>
+                        </div>
+                        
+                        <div class="time-details">
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <span id="total-days">0</span>
+                                    <p>dias completos</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <span id="heartbeats">0</span>
+                                    <p>batimentos do coração pensando em você</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-smile"></i>
+                                <div>
+                                    <span id="smiles">0</span>
+                                    <p>sorrisos por sua causa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="time-milestones">
+                        <h3>Próximas conquistas:</h3>
+                        <div class="milestone-list">
+                            <div class="milestone">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <h4>100 Dias Juntos</h4>
+                                    <p id="milestone-100">-</p>
+                                </div>
+                            </div>
+                            <div class="milestone">
+                                <i class="fas fa-birthday-cake"></i>
+                                <div>
+                                    <h4>1 Ano de Namoro</h4>
+                                    <p id="milestone-1year">-</p>
+                                </div>
+                            </div>
+                            <div class="milestone">
+                                <i class="fas fa-infinity"></i>
+                                <div>
+                                    <h4>Para Sempre</h4>
+                                    <p>O resto da nossa vida ❤️</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="time-quote">
+                    <i class="fas fa-quote-right"></i>
+                    <p>"O tempo não para, mas o nosso amor fica mais forte a cada segundo que passa."</p>
+                    <p class="quote-signature">- Pietro, para Marie</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Linha do Tempo -->
+        <section id="timeline" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-history"></i> Nossa História</h2>
+                <p class="section-subtitle">Cada momento especial que vivemos juntos</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="date-month">ABR</span>
+                            <span class="date-year">2025</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>A Primeira Mensagem</h3>
+                            <p>A primeira mensagem que trocamos pelo Instagram, e onde tudo começou.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="date-day">12</span>
+                            <span class="date-month">JUN</span>
+                            <span class="date-year">2025</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Dia dos Namorados</h3>
+                            <p>Um dia em que eu estava derrotado e muito triste. Quem diria que um beijo seria capaz de mudar tudo, melhorar aquele dia e me fazer me apaixonar por uma garota.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="date-day">03</span>
+                            <span class="date-month">DEZ</span>
+                            <span class="date-year">2025</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Pedido de Namoro</h3>
+                            <p>O dia em que eu tomei coragem e criei vergonha na cara. Mesmo treinando em casa e pensando em cada palavra que diria, nunca imaginei que no final sairia de uma forma tão tranquila e linda. Um dia muito especial pra mim.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="date-day">17</span>
+                            <span class="date-month">DEZ</span>
+                            <span class="date-year">2025</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Seu Aniversário</h3>
+                            <p>O dia em que você foi lá em casa pela primeira vez. Quem diria que, no aniversário de alguém, quem ganharia o presente seria eu.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="date-day">03</span>
+                            <span class="date-month">JAN</span>
+                            <span class="date-year">2026</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>1 Mês de Namoro</h3>
+                            <p>Quando olhamos pra trás e pensamos em tudo o que já vivemos: as pessoas olhando pra gente juntos, as conversas no refeitório… Quem diria que esse seria apenas o primeiro mês de muitos, juntos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">
+                            <span class="date-day">HOJE</span>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>E para o futuro...</h3>
+                            <p>Continuamos escrevendo nossa história, com muitos planos e expectativas para o futuro. Cada sonho que compartilhamos, cada risada, cada olhar - tudo me faz te amar mais a cada dia que passa!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Galeria -->
+        <section id="gallery" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-images"></i> Nossos Momentos</h2>
+                <p class="section-subtitle">23 momentos especiais que contam nossa história</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-controls">
+                    <button class="filter-btn active" data-filter="all">Todas (23)</button>
+                    <button class="filter-btn" data-filter="regional">Regional de Robótica (8)</button>
+                    <button class="filter-btn" data-filter="primeira">Primeiras Fotos (5)</button>
+                    <button class="filter-btn" data-filter="natal">Natal (3)</button>
+                    <button class="filter-btn" data-filter="formatura">Formatura (2)</button>
+                    <button class="filter-btn" data-filter="cosplay">Cosplay (2)</button>
+                    <button class="filter-btn" data-filter="especiais">Especiais (3)</button>
+                </div>
+                
+                <div class="photo-count">
+                    <i class="fas fa-camera"></i> Mostrando 23 de 23 fotos
+                </div>
+                
+                <div class="photo-grid">
+                    <!-- Natal (3 fotos) -->
+                    <div class="photo-item" data-category="natal">
+                        <img src="images/natal1.jpg" alt="Natal 2025">
+                        <div class="photo-overlay">
+                            <h3>Primeiro Natal Juntos</h3>
+                            <p>Dezembro 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="natal">
+                        <img src="images/natal2.jpg" alt="Natal em família">
+                        <div class="photo-overlay">
+                            <h3>Natal em Família</h3>
+                            <p>Dezembro 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="natal">
+                        <img src="images/natal3.jpg" alt="Troca de presentes">
+                        <div class="photo-overlay">
+                            <h3>Natal em família</h3>
+                            <p>Dezembro 2025</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Regional de Robótica (8 fotos) -->
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo1.jpg" alt="Robótica 1">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Juntos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo2.jpg" alt="Robótica 2">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Fotinha juntos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo3.jpg" alt="Robótica 3">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Mais fotinhas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo4.jpg" alt="Robótica 4">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Mais e mais</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo5.jpg" alt="Robótica 5">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Que mulher</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo6.jpg" alt="Robótica 6">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Eu te amo!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo7.jpg" alt="Robótica 7">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Coisinha</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="regional">
+                        <img src="images/robo8.jpg" alt="Robótica 8">
+                        <div class="photo-overlay">
+                            <h3>Regional de Robótica</h3>
+                            <p>Tava barulho demais lá</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Aniversário (1 foto) -->
+                    <div class="photo-item" data-category="especiais">
+                        <img src="images/aniversario.jpg" alt="Aniversário da Marie">
+                        <div class="photo-overlay">
+                            <h3>Seu Aniversário</h3>
+                            <p>17 de Dezembro 2025</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Formatura (2 fotos) -->
+                    <div class="photo-item" data-category="formatura">
+                        <img src="images/formatura1.jpg" alt="Formatura 1">
+                        <div class="photo-overlay">
+                            <h3>Formatura</h3>
+                            <p>Momento especial</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="formatura">
+                        <img src="images/formatura2.jpg" alt="Formatura 2">
+                        <div class="photo-overlay">
+                            <h3>Formatura</h3>
+                            <p>Você estava tão majestosa</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pedido de Namoro (1 foto) -->
+                    <div class="photo-item" data-category="especiais">
+                        <img src="images/pedido.jpg" alt="Pedido de Namoro">
+                        <div class="photo-overlay">
+                            <h3>Pedido de Namoro</h3>
+                            <p>3 de Dezembro 2025</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Primeiras Fotos (5 fotos) -->
+                    <div class="photo-item" data-category="primeira">
+                        <img src="images/primeira1.jpg" alt="Primeira foto juntos">
+                        <div class="photo-overlay">
+                            <h3>Primeira Foto</h3>
+                            <p>Começo de tudo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="primeira">
+                        <img src="images/primeira2.jpg" alt="Segunda foto">
+                        <div class="photo-overlay">
+                            <h3>Primeiro Sorriso</h3>
+                            <p>Muito fofos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="primeira">
+                        <img src="images/primeira3.jpg" alt="Terceira foto">
+                        <div class="photo-overlay">
+                            <h3>Olhares Trocados</h3>
+                            <p>OLHA ISSO</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="primeira">
+                        <img src="images/primeira4.jpg" alt="Quarta foto">
+                        <div class="photo-overlay">
+                            <h3>Primeira foto</h3>
+                            <p>Obrigado por tanto...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="primeira">
+                        <img src="images/primeira5.jpg" alt="Quinta foto">
+                        <div class="photo-overlay">
+                            <h3>Primeira foto</h3>
+                            <p>Naturalidade entre nós</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Campus Party (1 foto) -->
+                    <div class="photo-item" data-category="especiais">
+                        <img src="images/campus.jpg" alt="Campus Party">
+                        <div class="photo-overlay">
+                            <h3>Campus Party</h3>
+                            <p>Mundo da tecnologia</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cosplay (2 fotos) -->
+                    <div class="photo-item" data-category="cosplay">
+                        <img src="images/cosplay1.jpg" alt="Cosplay 1">
+                        <div class="photo-overlay">
+                            <h3>Cosplay Juntos</h3>
+                            <p>Personagens favoritos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="photo-item" data-category="cosplay">
+                        <img src="images/cosplay2.jpg" alt="Cosplay 2">
+                        <div class="photo-overlay">
+                            <h3>Fantasias</h3>
+                            <p>Minha foto favorita</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-info">
+                    <p><i class="fas fa-info-circle"></i> Vida usa os botões acima para filtrar por categoria e ficar mais fácil pra ti. Amor passa o mouse sobre as fotos para ver detalhes.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Carta -->
+        <section id="letter" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-heart"></i> Minha Carta para Você</h2>
+                <p class="section-subtitle">Palavras do coração</p>
+            </div>
+            
+            <div class="letter-container">
+                <div class="letter-paper">
+                    <div class="letter-header">
+                        <div class="letter-date">Para sempre, Marie</div>
+                        <div class="letter-wax-seal">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="letter-content">
+                        <p class="letter-greeting">Oi, meu amor.</p>
+                        
+                        <p>Eu fiz essa pequena surpresinha pra você, juntando tudo o que eu aprendi até agora — HTML, Python, banco de dados, CSS, C#. Queria só marcar essa data, 03 de janeiro, nosso primeiro mês juntos, de um jeito especial. Esse site é pra você</p>
+                        
+                        <p>O mais engraçado de tudo é que eu já tinha começado ele há muito tempo atrás, mas sempre me perdia, travava, não sabia mais o que fazer. E hoje eu estou aqui, finalmente te entregando isso. Parece simples, mas pra mim significa muito.</p>
+                        
+                        <p>Seu sorriso é o meu lugar favorito no mundo. Sua voz é a melodia mais doce que eu já ouvi. Seu amor é o maior presente que a vida me deu. Em você eu encontrei não só uma namorada, mas minha melhor amiga, minha confidente, meu porto seguro nos dias de tempestade e minha razão pra sorrir todos os dias.</p>
+                        
+                        <p>Quero estar ao seu lado nos dias bons e nos dias difíceis. Quero comemorar cada vitória sua como se fosse minha, secar suas lágrimas quando a tristeza aparecer e fazer de tudo pra ver você sorrir. Meu amor por você não é parado ele cresce, se expande e fica mais forte a cada dia.</p>
+                        
+                        <p>Obrigado por ser exatamente quem você é, meu bem. Obrigado por me amar com toda a intensidade do seu coração. Obrigado por acreditar em nós, no nosso amor e no nosso futuro. Eu não vejo a hora de viver nossos sonhos juntos, construir uma vida ao seu lado e envelhecer com você. ao fazer essa carta, não só a carta em si, mas o site em geral, lembrei de muitos momentos nossos juntos, mas um em especifíco veio em mente, o dia que voçë se abriu para mim amor..., obrigado por compartilhar comigo cada insegurança sua meu bem...</p>
+                        
+                        <p class="letter-closing">Feliz mesversário da gente.
+                         Feliz ano novo.
+Eu te amo, coração.</p>
+                        
+                        <div class="letter-signature">
+                            <p>Com todo meu amor, para sempre,</p>
+                            <div class="signature">Pietro</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="letter-envelope">
+                    <i class="fas fa-heart"></i>
+                    <p>Esta carta foi escrita para Marie Martins Marcolino</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Surpresa -->
+        <section id="surprise" class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-gift"></i> Surpresa Especial</h2>
+                <p class="section-subtitle">Uma demonstração do meu amor por você e mostrar como eu me sinto segurinho com meu momo!</p>
+            </div>
+            
+            <div class="surprise-container">
+                <div class="surprise-intro">
+                    <h3>Marie, do fundo do meu coração, você é uma pessoa incrível!</h3>
+                    <p>Preparei algo especial para mostrar o quanto você significa para mim e o quanto me sinto segurinho com meu momo. Clique no botão abaixo para liberar uma chuva de corações</p>
+                    
+                    <button id="surpriseBtn" class="surprise-btn">
+                        <i class="fas fa-heart"></i> Liberar Chuva de Amor
+                    </button>
+                    
+                    <p class="surprise-hint">Dica: Tente clicar nos corações que aparecerem!</p>
+                </div>
+                
+                <div class="surprise-canvas" id="surpriseCanvas">
+                    <!-- Aqui aparecerão os corações -->
+                </div>
+                
+                <div class="love-counter">
+                    <h4>Quantas vezes eu te amo?</h4>
+                    <div class="counter-display">
+                        <span id="loveCount">0</span>
+                        <span class="counter-label">vezes infinitas!</span>
+                    </div>
+                    <p class="counter-note">Cada coração representa um "eu te amo" do meu coração</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
